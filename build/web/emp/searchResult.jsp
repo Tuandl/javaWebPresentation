@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Search Result</h1>
-        <h4>Welcome <s:property value="#session.name"/></h4>
+        <s:url action="logoutAction" var="logout"></s:url>
+        <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         <s:if test="%{result != null && result.size() > 0}">
             <table border="1">
                 <thead>

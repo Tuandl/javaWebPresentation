@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Insert Patient</h1>
-        <h4>Welcome <s:property value="#session.name"/></h4>
+        <s:url action="logoutAction" var="logout"></s:url>
+        <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         <s:form action="insertPatientAction" method="post">
             <s:textfield name="username" label="Patient ID"/>
             <s:textfield name="name" label="Patient name"/>

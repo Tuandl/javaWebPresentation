@@ -7,18 +7,18 @@
     <package name="default" extends="struts-default">
         <action name="loginAction" class="actions.Login">
             <result name="fail">invalidPage.jsp</result>
-            <result name="emp">emp/search.jsp</result>
-            <result name="patient">patient/info.jsp</result>
+            <result name="emp">/emp/search.jsp</result>
+            <result name="patient">/patient/info.jsp</result>
         </action>
         <action name="updatePatientAction" class="actions.UpdatePatient">
-            <result name="success">patient/info.jsp</result>
+            <result name="success">/patient/info.jsp</result>
         </action>
         <action name="searchSurgeryRecordAction" class="actions.SearchSurgery"> 
-            <result name="success">emp/searchResult.jsp</result>
-            <result name="fail">emp/search.jsp</result>
+            <result name="success">/emp/searchResult.jsp</result>
+            <result name="fail">/emp/search.jsp</result>
         </action>
         <action name="selectSurgeryToUpdateAction" class="actions.FindReportToUpdate">
-            <result name="success">emp/updateReport.jsp</result>
+            <result name="success">/emp/updateReport.jsp</result>
             <result name="fail" type="redirectAction">
                 <param name="actionName">searchSurgeryRecordAction</param>
                 <param name="searchValue">${searchValue}</param>
@@ -31,20 +31,17 @@
                 <param name="searchValue">${searchValue}</param>
                 <param name="action">search</param>
             </result>
-            <result name="fail">
-                emp/updateReport.jsp
-            </result>
-            <result name="success">
-                emp/updateReport.jsp
-            </result>
+            <result name="fail">/emp/updateReport.jsp</result>
+            <result name="success">/emp/updateReport.jsp</result>
         </action>
         <action name="insertPatientAction" class="actions.InsertPatient">
             <result name="success">insertPatient.jsp</result>
         </action>
         <action name="insertReportAction" class="actions.InsertReport">
-            <result name="success">
-                insertReport.jsp
-            </result>
+            <result name="success">/insertReport.jsp</result>
+        </action>
+        <action name="logoutAction" class="actions.Logout">
+            <result name="success">/index.jsp</result>
         </action>
     </package>
 </struts>

@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Search Surgery Record</h1>
-        <h4>Welcome <s:property value="#session.name"/></h4>
+        <s:url action="logoutAction" var="logout"></s:url>
+        <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         <%--<s:form action="searchSurgeryRecordAction" method="POST">--%>
         <%--<s:textfield name="searchValue" value="%{searchValue}" label="Patient Name"/>--%>
         <%--<s:submit value="Search" name="action"/>--%>
@@ -27,7 +28,7 @@
             <input type="submit" name="action" value="Reset"/>
         </form>
 
-        <a href="emp/insertPatient.jsp">Insert Patient</a><br/>
-        <a href="emp/insertReport.jsp">Insert Surgery Information</a>
+        <a href="/Presentation/emp/insertPatient.jsp">Insert Patient</a><br/>
+        <a href="/Presentation/emp/insertReport.jsp">Insert Surgery Information</a>
     </body>
 </html>

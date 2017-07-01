@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Insert Surgery Information</h1>
-        <h4>Welcome ${session.name}</h4>
+        <s:url action="logoutAction" var="logout"></s:url>
+        <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         <s:form action="insertReportAction" method="post">
             <s:textfield name="reportID" label="Surgery Record ID"/>
             <s:textfield name="processOfSurgery" label="Process Of Surgery"/>

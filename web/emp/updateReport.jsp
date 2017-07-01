@@ -14,7 +14,8 @@
     </head>
     <body>
         <h1>Update</h1>
-        <h4>Welcome <s:property value="#session.name"/></h4>
+        <s:url action="logoutAction" var="logout"></s:url>
+        <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         <s:form action="updateReportAction" method="post">
             <s:textfield name="patientID" value="%{report.patient.username}" label="Patient ID"/>
             <s:textfield name="patientName" value="%{report.patient.name}" label="Patient Name"/>
