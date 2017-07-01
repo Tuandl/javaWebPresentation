@@ -13,8 +13,8 @@
         <title>Info Page</title>
     </head>
     <body>
-        <s:url action="logoutAction" var="logout"></s:url>
         <h1>Update Profile</h1>
+        <s:url action="logoutAction" var="logout"></s:url>
         <h4>Welcome <s:property value="#session.name"/> <small><a href="${logout}">logout</a></small></h4>
         
         <s:form action="updatePatientAction" method="post">
